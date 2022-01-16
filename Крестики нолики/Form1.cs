@@ -16,8 +16,6 @@ namespace Крестики_нолики
         {
             InitializeComponent();
         }
-        int a1 = 2, a2 = 2, a3 = 2, b1 = 2, b2 = 2, b3 = 2, c1 = 2, c2 = 2, c3 = 2;
-        int hod = 0;
         int rastanovka = 0;
         int s = 11;
 
@@ -60,13 +58,17 @@ namespace Крестики_нолики
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Первым ходит бот")
+            if (button1.Text == "")
             {
-                button1.Text = "O";
+                if (textBox1.Text == "Первым ходит бот")
+                {
+                    button1.Text = "O";
+                }
+                else button1.Text = "X";
+                s = 11;
+                Bot.Hod(button1, button2, button3, button4, button5, button6, button7, button8, button9, textBox1, rastanovka);
             }
-            else button1.Text = "X";
-            Bot.Hod(button1, button2, button3, button4, button5, button6, button7, button8, button9, textBox1, rastanovka);
-
+            Bot.Result(button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button15, timer1, label1, textBox1, s);
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -90,7 +92,6 @@ namespace Крестики_нолики
                         button7.Enabled = true;
                         button8.Enabled = true;
                         button9.Enabled = true;
-                        textBox1.Enabled = true;
                         timer1.Start();
                         break;
                     case (2):
@@ -105,11 +106,10 @@ namespace Крестики_нолики
                         button7.Enabled = true;
                         button8.Enabled = true;
                         button9.Enabled = true;
-                        textBox1.Enabled = true;
+                        Bot.Hod(button1, button2, button3, button4, button5, button6, button7, button8, button9, textBox1, rastanovka);
                         timer1.Start();
                         break;
                 }
-                Bot.Hod(button1, button2, button3, button4, button5, button6, button7, button8, button9, textBox1, rastanovka);
             }
         }
 
@@ -151,80 +151,127 @@ namespace Крестики_нолики
             button7.Text = "";
             button8.Text = "";
             button9.Text = "";
-            hod = 0;
         }
 
 
         private void button2_Click(object sender, EventArgs e)
-        {
-            if (textBox1.Text == "Первым ходит бот")
+        {         
+            if (button2.Text == "")
             {
-                button2.Text = "O";
+                if (textBox1.Text == "Первым ходит бот")
+                {
+                    button2.Text = "O";
+                }
+                else button2.Text = "X";
+                s = 11;
+                Bot.Hod(button1, button2, button3, button4, button5, button6, button7, button8, button9, textBox1, rastanovka);
             }
-            else button2.Text = "X";
+            Bot.Result(button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button15, timer1, label1, textBox1, s);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Первым ходит бот")
+            if (button3.Text == "")
             {
-                button3.Text = "O";
+                if (textBox1.Text == "Первым ходит бот")
+                {
+                    button3.Text = "O";
+                }
+                else button3.Text = "X";
+                s = 11;
+                Bot.Hod(button1, button2, button3, button4, button5, button6, button7, button8, button9, textBox1, rastanovka);
             }
-            else button3.Text = "X";
+            Bot.Result(button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button15, timer1, label1, textBox1, s);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Первым ходит бот")
+            if (button4.Text == "")
             {
-                button4.Text = "O";
+                if (textBox1.Text == "Первым ходит бот")
+                {
+                    button4.Text = "O";
+                }
+                else button4.Text = "X";
+                s = 11;
+                Bot.Hod(button1, button2, button3, button4, button5, button6, button7, button8, button9, textBox1, rastanovka);
             }
-            else button4.Text = "X";
+            Bot.Result(button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button15, timer1, label1, textBox1, s);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Первым ходит бот")
+            if (button5.Text == "")
             {
-                button5.Text = "O";
+                if (textBox1.Text == "Первым ходит бот")
+                {
+                    button5.Text = "O";
+                }
+                else button5.Text = "X";
+                s = 11;
+                Bot.Hod(button1, button2, button3, button4, button5, button6, button7, button8, button9, textBox1, rastanovka);
             }
-            else button5.Text = "X";
+            Bot.Result(button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button15, timer1, label1, textBox1, s);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Первым ходит бот")
+            if (button6.Text == "")
             {
-                button6.Text = "O";
+                if (textBox1.Text == "Первым ходит бот")
+                {
+                    button6.Text = "O";
+                }
+                else button6.Text = "X";
+                s = 11;
+                Bot.Hod(button1, button2, button3, button4, button5, button6, button7, button8, button9, textBox1, rastanovka);
             }
-            else button6.Text = "X";
+            Bot.Result(button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button15, timer1, label1, textBox1, s);
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Первым ходит бот")
+            if (button7.Text == "")
             {
-                button7.Text = "O";
+                if (textBox1.Text == "Первым ходит бот")
+                {
+                    button7.Text = "O";
+                }
+                else button7.Text = "X";
+                s = 11;
+                Bot.Hod(button1, button2, button3, button4, button5, button6, button7, button8, button9, textBox1, rastanovka);
             }
-            else button7.Text = "X";
+            Bot.Result(button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button15, timer1, label1, textBox1, s);
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Первым ходит бот")
+            if (button8.Text == "")
             {
-                button8.Text = "O";
+                if (textBox1.Text == "Первым ходит бот")
+                {
+                    button8.Text = "O";
+                }
+                else button8.Text = "X";
+                s = 11;
+                Bot.Hod(button1, button2, button3, button4, button5, button6, button7, button8, button9, textBox1, rastanovka);
             }
-            else button8.Text = "X";
+            Bot.Result(button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button15, timer1, label1, textBox1, s);
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Первым ходит бот")
+            if (button9.Text == "")
             {
-                button9.Text = "O";
+                if (textBox1.Text == "Первым ходит бот")
+                {
+                    button9.Text = "O";
+                }
+                else button9.Text = "X";
+                s = 11;
+                Bot.Hod(button1, button2, button3, button4, button5, button6, button7, button8, button9, textBox1, rastanovka);
             }
-            else button9.Text = "X";
+            Bot.Result(button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button15, timer1, label1, textBox1, s);
         }
     }
 }
